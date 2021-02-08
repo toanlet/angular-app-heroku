@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form class="login" [formGroup]="loginForm" (ngSubmit) = "onSubmit()">
+                <h2 >Đăng Nhập</h2>
+                <div class="form-group">               
+                  <input type="email" class="form-control" formControlName="email" placeholder="Email hoặc số điện thoại">                
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" formControlName="password" placeholder="Mật khẩu">
+                </div>
+                <button type="submit" class="btn  btn-login">Đăng Nhập</button>
+                <div class="d-flex login-with">
+                    <a class="reset">Quên mật khẩu</a>
+                    <a class="login-sms">Đăng nhập với SMS</a>
+                </div>
+                <div class="between">Hoặc</div>
+                <div class="btn-group">    
+                    <button class="btn btn-primary "><fa-icon [icon]="['fab', 'facebook']" ></fa-icon>Facebook</button>
+                    <button class="btn btn-primary mx-3"><fa-icon [icon]="['fab', 'facebook']" ></fa-icon>Facebook</button>
+                    <button class="btn btn-primary"><fa-icon [icon]="['fab', 'facebook']"></fa-icon>Facebook</button>
+                </div>
+                <div class="suggest">
+                  <p>Bạn chưa biết đến Shoppe <a>Đăng Ký</a> </p>
+                 
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

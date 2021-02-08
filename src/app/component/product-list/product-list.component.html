@@ -1,0 +1,13 @@
+<div class="row">   
+    <div class="col-sm-6 col-md-3" *ngFor="let product of products  | slice: (page-1) * pageSize : page * pageSize" >
+        <app-product [product] ="product" (click)="navigateDetail(product.ProductId)"></app-product>
+    </div>
+</div>
+<div class="row" *ngIf="products.length">
+    <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="products.length"
+    class="m-auto">
+    </ngb-pagination>
+</div>

@@ -1,0 +1,11 @@
+<div class="serch-filter">
+    <div class="category">
+        <h3 >Tất Cả Danh Mục</h3>
+        <ul>
+            <div class="d-flex " *ngFor="let category of categories"  [ngClass]="{'red': category.isActive}" >
+                <span class="p-2" *ngIf="category.isActive"><fa-icon icon="angle-right"></fa-icon></span>
+                <li class="category-link"  (click)="getActive(category.id); fillterList(category.id)"><a>{{ category.name }}</a></li>
+            </div>
+         </ul>
+    </div>
+</div>

@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "routing"
+    }
+  },
+  "defaultProject": "routing",
+  "cli": {
+    "analytics": "6956a9f7-b195-410d-8192-5701a30bdeca"
+  }
 }

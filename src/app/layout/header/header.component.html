@@ -1,0 +1,59 @@
+
+<div class="header">
+    <div class="container">
+        <div class="top-header">
+            <div class="left">
+                <ul class="nav ">
+                    <li class="nav-item">
+                        <a  class="nav-link" >Kênh người bán</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" >Tải ứng dụng</a>
+                    </li>
+                    <li class="nav-item">
+                        <p  class="nav-link" >Kết nối</p>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link"><fa-icon [icon]="['fab', 'facebook']"></fa-icon></a> 
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link"><fa-icon [icon]="['fab', 'instagram']"></fa-icon></a> 
+                    </li>                                                                        
+                </ul>
+            </div>
+            <div class="right">
+                <ul class="nav ">
+                    <li class="nav-item">
+                        <a  class="nav-link" ><fa-icon icon="bell" class="pr-2"></fa-icon>Thông báo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" ><fa-icon icon="question-circle"  class="pr-2"></fa-icon>Trợ giúp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" [routerLink]="['/register']" routerLinkActive="router-link-active" >Đăng Ký</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" (click)="checkLogin()"  >{{ isLogin ?  'Đăng Xuất' : 'Đăng Nhập' }}</a> 
+                    </li>
+                                                                                              
+                </ul>
+            </div>
+            
+        </div>
+        <div class="main-header">
+         
+            <div class="logo">
+                <a [routerLink]="['/home']" routerLinkActive="router-link-active" ><fa-icon icon="smile-wink" class="pr-2"></fa-icon> Shoppe </a>
+            </div>
+            <form class="search-bar" (ngSubmit)="searchProduct()">         
+                <input type="text" placeholder="Tìm tên sản phầm, nhãn hàng, tên cửa hàng" name="searchText" [(ngModel)]="searchText">
+                <button class="btn btn-primary" type="submit" > <fa-icon icon="search" class="pr-2"></fa-icon> </button>
+            </form>
+            <div class="cart">
+               <p class="item"> {{ qualities.length ? qualities.length : '0'}} </p><a [routerLink]="['/cart']" routerLinkActive="router-link-active" > <fa-icon icon="shopping-cart" class="pr-2"></fa-icon> </a>  
+            </div>
+        </div>
+      
+        
+    </div>
+</div>

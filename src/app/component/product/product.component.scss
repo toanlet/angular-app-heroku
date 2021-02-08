@@ -1,0 +1,49 @@
+.product {
+    height: 300px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    display: inline-block;
+    &:hover {
+        top: 5px;
+        cursor: pointer;
+    }
+    .image {
+        height: 50%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .content {
+        text-align: center;
+        .title {
+            font-size: 14px;
+            word-break: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .text {
+            color: red;
+        }
+        .rating {
+            display: flex;
+            justify-content: center;
+            .star {
+                color: #ffc107;
+            }
+            .note {
+                font-size: 12px;
+                padding: .25rem;
+                margin-left: .5rem;
+                font-size: grey;
+            }
+        }
+       
+    }
+
+}

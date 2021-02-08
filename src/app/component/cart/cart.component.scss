@@ -1,0 +1,61 @@
+table {
+    tr{
+        th {
+            border-bottom: none;
+        }
+    }
+    td {
+       
+        line-height: 100px;
+        img {
+            height: 100px;
+        }
+    }
+}
+.cart-list {
+    width: 100%;
+
+    .title {
+        width: 40%;
+    }
+    .price {
+        width: 15%;
+    }
+    .amount {
+        width: 15%;
+    }
+    .qualities {
+        width: 15%;
+    }
+    .actice {
+        width: 15%;
+    }
+}
+.text-line {
+
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.summary {
+    padding: 3rem 0;
+    border-top: 3px solid red;
+    .buy-now {
+        width: 120px;
+        height: 40px;
+        background-color: red;
+        color: white;
+    }
+}
+.payment {
+    padding-left: 9rem;
+    color: red;
+}
+.btn-delete {
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-search-filter *ngIf="productList.length" [products]="productList" (filter)="filterList($event)"></app-search-filter>
+        </div>
+        <div class="col-md-9">
+            <div class="loading"><fa-icon icon="spinner" *ngIf="loading" ></fa-icon></div>
+            <app-product-list  [products]="filterProduct" *ngIf="!loading" ></app-product-list>
+        </div>
+    </div>
+   
+</div>

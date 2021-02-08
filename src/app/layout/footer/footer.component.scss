@@ -1,0 +1,27 @@
+
+.menu {
+    width: 20%;
+    padding: 0 .5rem;
+}
+ul,li {
+    list-style: none;
+}
+.line {
+    height: 2px;
+    margin: 2rem 0;
+    background-color: red;
+}
+.footer {
+    font-size: 13px;
+    color: #756c74;
+    .title {
+        white-space: nowrap;
+        font-weight: 600;
+    }
+    a {
+        white-space: nowrap;
+        &:hover {
+            color: orangered;
+        }
+    }
+}

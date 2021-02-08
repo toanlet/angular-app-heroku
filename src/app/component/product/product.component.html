@@ -1,0 +1,21 @@
+<div class="card product" >
+    <div class="image">
+        <img class="card-img-top " src="{{ product.ThumbailUrl }}" alt="Card image cap">
+    </div>
+    <div class="content p-2">
+        <p class="title">{{ product.Name }}</p>
+        <p class="text">${{ product.Price}} - {{ product.OriginalPrice}} </p>
+        <div class="rating">
+            <ngb-rating ([rate])="3"  [max]="5">
+                <ng-template let-fill="fill" let-index="index">
+                    <span class="star">&#9733;</span>
+                </ng-template>
+            </ngb-rating>
+            <p class="note">Đã bán 2.5k</p>
+        </div>
+            
+
+     
+       
+    </div>
+</div>

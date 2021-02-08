@@ -1,0 +1,122 @@
+.detail {
+    position: relative;
+    .notification {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        padding: 3rem;
+        border-radius: 14px;
+        color: white;
+        background-color: rgba(0,0,0,0.75);
+    }
+}
+.img {
+    border: 5px solid #f54a04;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    
+    p {
+        position: absolute;
+        top: 10%;
+        right: 20%;
+        font-size: 1.5rem;
+        
+    }
+}
+.img-list {
+    margin-top: 1rem;
+    display: flex;
+    ul, li {
+        list-style: none;
+        margin: 0 .5rem;
+    }
+    p {
+        height: 50px;
+        width: 50px;
+        background: green;
+    }
+}
+.price {
+    padding: 2rem 0;
+    display: flex;
+    .current {
+        color: red;
+        padding: 0 1rem;
+    }
+    .discount {
+        color: grey;
+        text-decoration: line-through;
+        line-height: 2rem;
+    }
+    .percent {
+        height: 30px;
+        background: #f92e03;
+        color: white;
+        font-size: 13px;
+        box-sizing: border-box;
+        line-height: 30px;
+        border-radius: 5px;
+        margin-top: 4px;
+        p {
+            padding: 0 .5rem;
+        }
+    }
+}
+.active {
+    border: 3px solid red;
+}
+.review {
+    display: flex;
+    div {
+        margin-right: 1rem;
+        position: relative;
+        &:nth-child(2), &:nth-child(3) {
+            &::after {
+                content: "";
+                position: absolute;
+                border-left: 2px solid;
+                top: 10%;
+                left: -10px;
+                height: 50%;
+            }
+        } 
+    }
+    .rating {
+        display: flex;
+        color: #f83b04;
+       
+        .star {
+            color: #f83b04;
+        }
+    }
+}
+.amount {
+    display: flex;
+    margin-top: 1rem;
+    div {
+        margin-right: 2rem;
+    }
+    .btn-group {
+        button {
+            border: 1px solid;
+            width: 60px;
+        }
+        p {
+            width: 80px;
+            text-align: center;
+            
+        }
+    }
+}
+.add-cart {
+    margin-top: 3rem;
+    button {
+        border: 2px solid #fe0800;
+        color:  #fe0800;
+    }
+    .buy-now {
+        background-color: #fe0800;
+        color: white;
+    }
+}

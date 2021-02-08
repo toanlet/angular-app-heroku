@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 totally" *ngIf="productList.length">
+           
+           <table class="table cart-list">
+               <thead>
+                   <tr>
+                       <th class="tilte">Sản Phẩm</th>
+                       <th class="price">Đơn Giá</th>
+                       <th class="qualities">Số Lượng</th>
+                       <th class="amount">Thành Tiền</th>
+                       <th class="action">Thao tác</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr *ngFor="let product of productList">
+                        <td class="d-flex">                        
+                           <img src="{{product.ThumbailUrl}}" alt="product.Name">
+                           <p class="pl-3 text-line ">{{ product.Name}}</p>
+                        </td>
+                        <td >{{ product.Price}}</td>
+                        <td><button class="btn " (click)="decrease(product.ProductId)">-</button>{{ product.qualities }}<button class="btn" (click)="increase(product.ProductId)">+</button></td>
+                        <td >{{ product.Price * product.qualities }} </td>
+                        <td ><button class="btn btn-delete" (click)="deleteProduct(product.ProductId)">Xóa</button></td>
+                   </tr>
+               </tbody>
+           </table>
+           <div class="summary">  
+               <button class="btn "></button>
+            <div class="d-flex justify-content-end">         
+                <h4 class="title">Tổng Tiền Hàng</h4>
+                <div class="d-flex payment">
+                    <h3 class="pr-5">${{ totally }}</h3>
+                    <button class="btn buy-now">Mua Hàng</button>
+                </div>            
+            </div>         
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!productList.length">Giỏ Hàng Trống</div>
+    
+</div>
